@@ -34,6 +34,8 @@ l2_color = (0,0,255)    # color of line 2
 output_folder = 'vehicle_frames'    # folder where images are stored
 duplicate_distance_cutoff = 200     # minimum distance from previous prediction in order to be a different object
 buffer_object_life = 3  # the number of frames for which a car object will remain in the buffer; this number is ideal for low fps; increase for higher fps
+if not os.path.exists(output_folder):   # create folder where images are stored
+    os.makedirs(output_folder)
 ########## GLOBAL INITIALIZATIONS ##########
 
 ########## CAR OBJECT CLASS DEFINITION ##########
